@@ -13,12 +13,12 @@
                     <div class="mt-3">
                         <label class="form-label" for="username">Username: </label> 
                         <span class="text-danger badge"><?= $_COOKIE['mess_u']??""?></span>
-                        <input class="form-control" type="text" name="username" id="username">
+                        <input class="form-control" type="text" name="username" id="username" placeholder="Nhập tên user...">
                     </div>
                     <div class="mt-3">
                         <label class="form-label" for="password">Password: </label>
                         <span class="text-danger badge"><?= $_COOKIE['mess_p']??""?></span>
-                        <input class="form-control" type="text" name="password" id="password">
+                        <input class="form-control" type="text" name="password" id="password" placeholder="Nhập password...">
                     </div>
                     <div class="mt-3">
                         <label class="form-check-label" for="memo">

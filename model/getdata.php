@@ -68,7 +68,16 @@ function loadDtSearch($search){
     $kq = $stmt->fetchAll();
     return $kq;
 }
-function loadTopSP(){
-    
+function loadSpNew(){
+    $conn = connect();
+    $query = "SELECT * FROM sanpham WHERE 1 ORDER BY id DESC LIMIT 4";
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $kq = $stmt->fetchAll();
+    return $kq;
+}
+function loadPrDetail($id_product){
+    $query = "SELECT * FROM sanpham WHERE id=$id_product";
+    return getdata_where($query);
 }
 ?>

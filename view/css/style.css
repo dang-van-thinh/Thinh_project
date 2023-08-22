@@ -37,6 +37,9 @@
     position: absolute;
     top: 0.75rem;
     font-family: monospace;
+    background-color: orangered;
+    padding: 3px 7px;
+    border-radius: 50%;
 }
 .form_search{
     position: relative;
@@ -75,7 +78,7 @@
 }
 .src_img{
     width: 100%;
-    max-height: 300px;
+    height: 300px;
 }
 .name_product:hover{
     text-decoration: underline;

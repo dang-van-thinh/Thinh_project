@@ -2,19 +2,20 @@
     <!-- header details -->
     <div class="row">
         <!-- ảnh sản phẩm -->
-        <div class="col-md-5">
+        <div class="col-md-5 col-sm-5">
             <div class="container">
-                <img width="500" src="../view/img/product-1.jpg" alt="">
+                <img width="100%" src="<?=$sp['img']?>" alt="">
             </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7 col-sm-7">
             <!-- mô tả sản phẩm -->
             <div class="container">
                 <div class="mt-4">
-                    <span class="h2">Tên sản phẩm</span>
+                    <p class="h2"><?=$sp['tensp']?></p>
                 </div>
                 <div class="mt-4">
-                    <span class="text-danger fs-4 fw-bold">150.000 </span><span class="fs-4">VND</span>
+                    <span class="text-danger fs-4 fw-bold"><?=$sp['gia']?> VNĐ</span>
+                    <span class="price_old"><?=$sp['gia_cu']?></span>
                 </div>
                 <div class="mt-4">
                     <div>
@@ -48,8 +49,8 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-3">
-                            <button  class="btn btn-outline-success addcart"> Thêm vào giỏ hàng</button>
+                    <div class="col-md-2">
+                            <button  class="btn btn-outline-success ">Thêm <i class="fas fa-cart-plus fs-5"></i></button>
                         </div>
                         <div class="col-md-2">
                             <input type="submit" value="Mua hàng" class="btn btn-outline-danger">

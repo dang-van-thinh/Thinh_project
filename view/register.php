@@ -8,19 +8,19 @@
                 <h4>Đăng ký</h4>
                 <div class="mt-3">
                         <label class="form-label" for="email">Email: </label>
-                        <input class="form-control" type="text" name="email" id="email">
+                        <input class="form-control" type="text" name="email" id="email" placeholder="Nhập Email...">
                     </div>
                     <div class="mt-3">
                         <label class="form-label" for="username">Username: </label>
-                        <input class="form-control" type="text" name="username" id="username">
+                        <input class="form-control" type="text" name="username" id="username" placeholder="Nhập tên user...">
                     </div>
                     <div class="mt-3">
                         <label class="form-label" for="password">Password: </label>
-                        <input class="form-control" type="password" name="password" id="password">
+                        <input class="form-control" type="password" name="password" id="password" placeholder="Nhập password">
                     </div>
                     <div class="mt-3">
                         <label class="form-label" for="rpassword">Repassword: </label>
-                        <input class="form-control" type="password" name="rpassword" id="rpassword">
+                        <input class="form-control" type="password" name="rpassword" id="rpassword" placeholder="Nhập lại password">
                     </div>
                     <div class="mt-3">
                         <label class="form-label" for="anh">Ảnh đại diện: </label>

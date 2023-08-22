@@ -12,7 +12,7 @@ let showCart = document.getElementById('showgiohang')
 let cart =  JSON.parse(localStorage.getItem('cart'));
 if(cart != null){
     arrCart = cart
-    number_cart.innerHTML = cart.length
+    number_cart.innerHTML = arrCart.length
 }else{
     var arrCart = [];
 }
@@ -54,7 +54,7 @@ function showAddToCart(){
                     <td>${cart[i]['gia']}</td>
                     <td>${cart[i]['sl']}</td>
                     <td>${tt}</td>
-                    <td><a href="" onclick="xoasp()" id="xoasp">Xóa</a></td>
+                    <td><a class="btn btn-warning " href="" onclick="xoasp()" id="xoasp">Xóa</a></td>
                 </tr>`;
             showCart.innerHTML = kq;
         }

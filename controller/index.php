@@ -5,6 +5,8 @@ require_once "../model/connectdb.php";
 require_once "../model/getdata.php";
 require_once "../model/update.php";
         ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +18,7 @@ require_once "../model/update.php";
 if(isset($_GET['act'])){
     switch($_GET['act']){
         case'home':
+            $spnew = loadSpNew();
             include "../view/home.php";
             break;
         case'contact':
@@ -59,6 +62,10 @@ if(isset($_GET['act'])){
             include "../view/login.php";
             break;
         case'product_detail':
+            if(isset($_GET['id_sp'])){
+                $id_sp = $_GET['id_sp'];
+                $sp = loadPrDetail($id_sp);
+            }
             include "../view/product_detail.php";
             break;  
         case'inf_user':
@@ -69,10 +76,12 @@ if(isset($_GET['act'])){
             header('location: index.php?act=home');
             break;
         default: 
+        $spnew = loadSpNew();
         include "../view/home.php";
         break;
     }
 } else{
+    $spnew = loadSpNew();
     include "../view/home.php";
 }
 ?>

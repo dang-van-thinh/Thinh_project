@@ -18,7 +18,7 @@ $id_dm = $_GET['dm'];
         <div class="col-md-3 col-sm-4 my-3">
             <div class="card">
                 <div class="">
-                    <a href="?act=product_detail">
+                    <a href="?act=product_detail&id_sp=<?=$sp['id']?>">
                         <img src="<?=$sp['img']?>" alt="" class="src_img" >
                         <input hidden type="text" name="" class="id_product" value="<?=$sp['id']?>">
                     </a>
@@ -37,7 +37,7 @@ $id_dm = $_GET['dm'];
         <!-- end product -->
         <?php endforeach;?>
         <div class="d-flex justify-content-center">
-                <a href="" class="link-opacity-75-hover">Xem all>> </a>
+                <button class="link-opacity-75-hover btn_email">Xem all>> </button>
             </div>
 
     </div>

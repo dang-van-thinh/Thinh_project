@@ -18,7 +18,7 @@
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="../view/img/banner-2.jpg" class="d-block w-100" alt="...">
+                            <img src="../view/img/banner-5.png" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Second slide label</h5>
                                 <p>Some representative placeholder content for the second slide.</p>
@@ -77,63 +77,39 @@
             <div class="">
                 <div class="container-fluid ">
                     <div class="container my-3">
-                        <h4>Sản phẩm bán chạy</h4>
+                        <h4>Sản phẩm mới</h4>
                     </div>
                     <div class="row" id="">
+                        <?php 
+                        foreach($spnew as $item):
+                        ?>
                         <div class="col-md-3 col-sm-4 my-3">
                             <div class="card">
                                 <div class="">
-                                    <a href="?act=product_detail">
-                                        <img src="../view/img/product-1.jpg" alt="" class=" card-img-top">
+                                    <a href="?act=product_detail&id_sp=<?=$item['id']?>">
+                                        <img src="<?=$item['img']?>" alt="" class="src_img">
+                                        <input hidden type="text" name="" class="id_product" value="<?=$item['id']?>">
                                     </a>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Giá : <span class="text-danger price">150.000</span> VND</h5>
-                                    <p class="card-text name_product">Tên sản phẩm</p>
+                                    <h5 class="card-title">
+                                        Giá : <span class="text-danger price"><?=$item['gia']?></span> đ
+                                        <span class="price_old"><?=$item['gia_cu']?></span>
+                                    </h5>
+                                    <p class="card-text name_product"><?=$item['tensp']?></p>
                                     <button class="btn btn-danger">Mua</button>
                                     <button class="btn btn-success addcart"><i class="fas fa-cart-plus"></i></button>
                                 </div>
                             </div>
                         </div>
                         <!-- end product -->
-                        <div class="col-md-3 col-sm-4 my-3">
-                            <div class="card">
-                                <img src="../view/img/product-3.jpg" alt="" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Giá : <span class="text-danger price">150.000</span> VND</h5>
-                                    <p class="card-text name_product">Tên sản phẩm</p>
-                                    <button class="btn btn-danger">Mua</button>
-                                    <button class="btn btn-success addcart"><i class="fas fa-cart-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end product -->
-                        <div class="col-md-3 col-sm-4 my-3">
-                            <div class="card">
-                                <img src="../view/img/product-1.jpg" alt="" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Giá : <span class="text-danger">150.000</span> VND</h5>
-                                    <p class="card-text">Tên sản phẩm</p>
-                                    <button class="btn btn-danger">Mua</button>
-                                    <button class="btn btn-success addcart"><i class="fas fa-cart-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end product -->
-                        <div class="col-md-3 col-sm-4 my-3">
-                            <div class="card">
-                                <img src="../view/img/product-1.jpg" alt="" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Giá : <span class="text-danger">150.000</span> VND</h5>
-                                    <p class="card-text">Tên sản phẩm</p>
-                                    <button class="btn btn-danger">Mua</button>
-                                    <button class="btn btn-success addcart"><i class="fas fa-cart-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end product -->
+                        <?php endforeach;?>
+                        
+
+
+
                         <div class="d-flex justify-content-center">
-                            <button class="link-opacity-75-hover btn_email">Xem all>> </button>
+                            <a href="" class="link-opacity-75-hover btn_email">Xem all>> </a>
                         </div>
                     </div>
                     <!-- end san phảm bán chạy -->
