@@ -35,6 +35,12 @@ function getDanhmuc(){
     $query = "SELECT * FROM danhmuc_sanpham";
     return getdata_nowhere($query);
 }
+// lấy dữ liệu theo danh mục trừ sản phẩm đã click
+function loadSpDm_detail($id,$id_dm){
+    $query = "SELECT * FROM sanpham WHERE id<>'$id' AND id_dm='$id_dm' LIMIT 4";
+    return getdata_nowhere($query);
+} 
+
 // lấy sản phẩm theo danh mục
 function getSpDm($id_dm){
     $conn = connect();
@@ -54,7 +60,7 @@ function loadAllSp(){
     $query ="SELECT * FROM sanpham";
    return getdata_nowhere($query);
 }
-// lấy 1 sản phẩm theo 
+// lấy 1 sản phẩm theo id
 function loadOneSp($id){
     $query ="SELECT * FROM sanpham WHERE id=$id";
    return getdata_where($query);

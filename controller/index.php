@@ -64,7 +64,9 @@ if(isset($_GET['act'])){
         case'product_detail':
             if(isset($_GET['id_sp'])){
                 $id_sp = $_GET['id_sp'];
+                $id_dm = $_GET['id_dm'];
                 $sp = loadPrDetail($id_sp);
+                $spdm= loadSpDm_detail($id_sp,$id_dm);
             }
             include "../view/product_detail.php";
             break;  

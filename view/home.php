@@ -86,7 +86,7 @@
                         <div class="col-md-3 col-sm-4 my-3">
                             <div class="card">
                                 <div class="">
-                                    <a href="?act=product_detail&id_sp=<?=$item['id']?>">
+                                    <a href="?act=product_detail&id_sp=<?=$item['id']?>&id_dm=<?=$item['id_dm']?>">
                                         <img src="<?=$item['img']?>" alt="" class="src_img">
                                         <input hidden type="text" name="" class="id_product" value="<?=$item['id']?>">
                                     </a>
