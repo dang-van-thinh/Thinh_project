@@ -1,11 +1,11 @@
 
 let add_cart = document.getElementsByClassName('addcart');
-let number_cart = document.querySelector('#number_cart');
 let src_img = document.getElementsByClassName('src_img');
 let name_product = document.getElementsByClassName('name_product');
 let id_product = document.getElementsByClassName('id_product');
 let price = document.getElementsByClassName('price');
-var showCart = document.getElementById('showgiohang');
+let showCart = document.getElementById('showgiohang');
+let number_cart = document.querySelector('#number_cart');
 
 var arrCart = [];
 var local = localStorage.getItem('cart');
@@ -16,44 +16,45 @@ if (arrCart != null) {
     number_cart.innerHTML = arrCart.length
 }
 
+
 function addToCart() {
-    
     for (let i = 0; i < add_cart.length; i++) {
         add_cart[i].addEventListener('click', function () {
+            let id_pd = id_product[i].value;
+            let check = true;
+
+            if(arrCart != null){
+                arrCart.forEach(item => {
+                    if (item.id == id_pd) {
+                        item.sl = item.sl+1;
+                        localStorage.setItem('cart', JSON.stringify(arrCart));
+                        check =  false; // nếu có bất kỳ sản phẩm nào có id trùng với id sản phẩm mới thêm thì lập tức gán sl thêm 1 và trả biến check bằng false
+                    }
+                });
+            }
+            
             let img = src_img[i].getAttribute('src');
             let tensp = name_product[i].innerText;
             let gia = price[i].innerText;
-            let id_pd = id_product[i].value;
-            var sl = 1;
+            let sl = 1;
+            let sp = {
+                'id': id_pd,
+                'tensp': tensp,
+                'img': img,
+                'gia': gia,
+                'sl': sl
+            }
             
-            // let sp = {
-            //     'id': id_pd,
-            //     'tensp': tensp,
-            //     'img': img,
-            //     'gia': gia,
-            //     'sl': sl
-            // }
-            arrCart.forEach(item => {
-                if (item.id == id_pd) {
-                    item.sl +=1;
-                }else{
-                    let sp = {
-                        'id': id_pd,
-                        'tensp': tensp,
-                        'img': img,
-                        'gia': gia,
-                        'sl': sl
-                    }
-                    arrCart.push(sp);
-                }
-            });
-            
-            localStorage.setItem('cart', JSON.stringify(arrCart)); //  đẩy lên localstorage
+            if(check){ // sau khi check xong nếu ko có sản phẩm nào trùng thì ta mới thêm object mới vào mảng và mới up lên localstorage
+            arrCart.push(sp);
+             localStorage.setItem('cart', JSON.stringify(arrCart)); //  đẩy lên localstorage
+            }
+            // arrCart.push(sp);
+            // localStorage.setItem('cart', JSON.stringify(arrCart)); //  đẩy lên localstorage
             let cart = JSON.parse(localStorage.getItem('cart')) // lấy sp về đổ ra mảng
             if (cart != null) {
                 number_cart.innerHTML = cart.length
             }
-
         });
     }
 }
