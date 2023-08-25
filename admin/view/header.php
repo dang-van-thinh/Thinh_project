@@ -9,7 +9,7 @@
                         <span class="fs-2">Trang Admin Webshop</span>
                     </div>
                     <div class="col-md-4">
-                        <a href="admin.php?act=thoat" class="btn btn-outline-danger">Quay lại đăng nhập</a>
+                        <a href="admin.php?act=thoat" class="btn btn-outline-light">Quay lại đăng nhập <i class="fas fa-long-arrow-alt-right mx-1"></i></a>
                     </div>
                 </div>
             </div>

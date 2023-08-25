@@ -32,8 +32,9 @@
                     </td>
                     <td><?=$value['id_dm']?></td>
                     <td>
-                        <a onclick="return confirm('Bạn có chắn chắn muốn xóa sản phẩm này ?')" class="btn btn-warning" href="../admin/admin.php?act=sanpham&xoasp=<?= $value['id']?>">Xóa</a>
-                        <a class="btn btn-success" href="../admin/admin.php?act=editsp&edit=<?= $value['id']?>">Sửa</a>
+                        <a onclick="return confirm('Bạn có chắn chắn muốn xóa sản phẩm này ?')" class="btn btn-warning" href="../admin/admin.php?act=sanpham&xoasp=<?= $value['id']?>">Xóa <i class="fas fa-trash"></i></a> 
+                        
+                        <a class="btn btn-success mt-2" href="../admin/admin.php?act=editsp&edit=<?= $value['id']?>">Sửa <i class="fas fa-edit"></i></a>
                     </td>
                 </tr>
                 <?php endforeach;?>

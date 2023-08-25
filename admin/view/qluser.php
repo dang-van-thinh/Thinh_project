@@ -24,8 +24,8 @@
                         <img src="<?=$value['img']?>" alt="" width="110">
                     </td>
                     <td>
-                        <a href="../admin/admin.php?act=qluser&xoauser=<?= $value['id']?>">Xóa</a>
-                        <a href="../admin/admin.php?act=edituser&edit=<?= $value['id']?>">Sửa</a>
+                        <a class="btn btn-warning" onclick="return confirm('Bạn có chắc muốn xóa tài khoản này ?')" href="../admin/admin.php?act=qluser&xoauser=<?= $value['id']?>">Xóa <i class="fas fa-trash"></i></a>
+                        <a class="btn btn-success" href="../admin/admin.php?act=edituser&edit=<?= $value['id']?>">Sửa <i class="fas fa-edit"></i></a>
                     </td>
                 </tr>
                 <?php endforeach;?>

@@ -66,12 +66,13 @@ function showAddToCart() {
     let cart = JSON.parse(localStorage.getItem('cart'));
     if (cart != null) {
         document.querySelector('.warning_cart').style.display = 'none';
+        let stt = 1;
         cart.forEach(element => {
-            let row = document.createElement("tr");
+            let row = document.createElement("tr"); // tạo thằng thẻ tr mới 
             let tt = element.sl * element.gia;
 
             row.innerHTML = `
-                        <td>${element.id}</td>
+                        <td>${stt++}</td>
                         <td>${element.tensp}</td>
                         <td><img src="${element.img}" width="100"></td>
                         <td>${element.gia}</td>

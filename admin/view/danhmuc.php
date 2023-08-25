@@ -6,7 +6,10 @@
                 <form action="?act=dm" method="post">
                     <label for="danhmuc" class="form-label">Tên danh mục: </label>
                     <input type="text" name="danhmuc" id="" class="form-control">
-                    <input type="submit" value="Thêm danh mục" class="btn btn-outline-danger mt-3" name="themdm">
+                    <div class="btn btn-outline-danger mt-3">
+                    <input type="submit" value="Thêm danh mục" class="btn " name="themdm">
+                    <i class="fas fa-plus"></i>
+                    </div>
                 </form>
             </div>
         </div>
@@ -30,8 +33,8 @@
                         <td><?=$key+'1'?></td>
                         <td><?=$value['ten_dm']?></td>
                         <td>
-                            <a class=" btn btn-warning" href="">Xóa</a>
-                            <a class="btn btn-success" href="">Sửa</a>
+                            <a class=" btn btn-warning" href="">Xóa <i class="fas fa-trash"></i></a>
+                            <a class="btn btn-success" href="">Sửa <i class="fas fa-edit"></i></a>
                         </td>
                     </tr>
                     <?php endforeach;?>

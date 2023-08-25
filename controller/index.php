@@ -4,7 +4,7 @@ ob_start();
 require_once "../model/connectdb.php";
 require_once "../model/getdata.php";
 require_once "../model/update.php";
-        ?>
+?>
 
 
 <!DOCTYPE html>

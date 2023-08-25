@@ -31,7 +31,10 @@
                     </select>
                 </div>
                 <div class="mt-3">
-                    <input type="submit" value="Thêm" name="themsp" class="btn btn-danger">
+                    <div class="btn btn-danger">
+                    <input type="submit" value="Thêm" name="themsp" class="btn">
+                    <i class="fas fa-plus"></i>
+                    </div>
                 </div>
             </form>
         </div>
