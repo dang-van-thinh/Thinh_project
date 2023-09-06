@@ -4,17 +4,19 @@
         <!-- ảnh sản phẩm -->
         <div class="col-md-5 col-sm-5">
             <div class="container">
-                <img width="100%" src="<?= $sp['img'] ?>" alt="">
+                <img width="100%" src="<?= $sp['img'] ?>" alt="" class="src_img">
+                
             </div>
         </div>
         <div class="col-md-7 col-sm-7">
             <!-- mô tả sản phẩm -->
+            <input type="hidden" name="" class="id_product" value="<?= $sp['id']?>">
             <div class="container">
                 <div class="mt-4">
-                    <p class="h2"><?= $sp['tensp'] ?></p>
+                    <p class="h2 name_product"><?= $sp['tensp'] ?></p>
                 </div>
                 <div class="mt-4">
-                    <span class="text-danger fs-4 fw-bold"><?= $sp['gia'] ?> VNĐ</span>
+                    <span class="text-danger fs-4 fw-bold price"><?= $sp['gia'] ?> VNĐ</span>
                     <span class="price_old"><?= $sp['gia_cu'] ?></span>
                 </div>
                 <div class="mt-4">

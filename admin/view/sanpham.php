@@ -3,7 +3,7 @@
         <div class="row d-flex justify-content-end">
             <div class="col-md-5 ">
                 <form action="">
-                    <input type="text" name="" id="" class="mb-2">
+                    <input type="text" name="" id="" class="mb-2" placeholder="Tìm sản phẩm theo danh mục">
                     <input type="submit" value="Tìm kiếm">
                 </form>
             </div>

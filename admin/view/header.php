@@ -9,14 +9,14 @@
                         <span class="fs-2">Trang Admin Webshop</span>
                     </div>
                     <div class="col-md-4">
-                        <a href="admin.php?act=thoat" class="btn btn-outline-light">Quay lại đăng nhập <i class="fas fa-long-arrow-alt-right mx-1"></i></a>
+                        <a href="admin.php?act=thoat" class="btn btn-outline-light">Quay lại trang người dùng <i class="fas fa-long-arrow-alt-right mx-1"></i></a>
                     </div>
                 </div>
             </div>
         </header>
-        <div class="container-fluid">
+        <div class="container-fluid ">
             <div class="row">
-                <div class="col-md-2 border mt-2 p-2">
+                <div class="col-md-2 border mt-2 p-2 ">
                     <h4>Danh mục</h4>
                     <ul class="nav flex-column">
                         <li class="nav-item mt-3 border">
@@ -30,12 +30,6 @@
                         </li>
                         <li class="nav-item mt-3 border">
                             <a class="nav-link text-dark" href="admin.php?act=qluser">Quản lý User</a>
-                        </li>
-                        <li class="nav-item mt-3 border">
-                            <a class="nav-link text-dark" href="admin.php?act=thongke">Thống kê</a>
-                        </li>
-                        <li class="nav-item mt-3 border">
-                            <a class="nav-link text-dark" href="admin.php?act=thongke">Thống kê</a>
                         </li>
                     </ul>
                 </div>
